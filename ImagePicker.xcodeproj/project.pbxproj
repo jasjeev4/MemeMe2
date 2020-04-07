@@ -15,6 +15,8 @@
 		C83A837B2434AF1400461DCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83A83792434AF1400461DCC /* LaunchScreen.storyboard */; };
 		C83A83862434AF1500461DCC /* ImagePickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83A83852434AF1500461DCC /* ImagePickerTests.swift */; };
 		C83A83912434AF1500461DCC /* ImagePickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83A83902434AF1500461DCC /* ImagePickerUITests.swift */; };
+		C8850A88243B689600FD596D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8850A87243B689600FD596D /* TableViewController.swift */; };
+		C8931EDD2438AE3000294F69 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8931EDC2438AE3000294F69 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C83A838C2434AF1500461DCC /* ImagePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImagePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83A83902434AF1500461DCC /* ImagePickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerUITests.swift; sourceTree = "<group>"; };
 		C83A83922434AF1500461DCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8850A87243B689600FD596D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C8931EDC2438AE3000294F69 /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				C83A83772434AF1400461DCC /* Assets.xcassets */,
 				C83A83792434AF1400461DCC /* LaunchScreen.storyboard */,
 				C83A837C2434AF1400461DCC /* Info.plist */,
+				C8931EDC2438AE3000294F69 /* Meme.swift */,
+				C8850A87243B689600FD596D /* TableViewController.swift */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -260,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C83A83732434AF0200461DCC /* ViewController.swift in Sources */,
+				C8931EDD2438AE3000294F69 /* Meme.swift in Sources */,
 				C83A836F2434AF0200461DCC /* AppDelegate.swift in Sources */,
+				C8850A88243B689600FD596D /* TableViewController.swift in Sources */,
 				C83A83712434AF0200461DCC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,23 +16,17 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var nav: UINavigationItem!
+    @IBOutlet weak var navbarRight: UIBarButtonItem!
+    @IBOutlet weak var galleryButton: UIButton!
     
-    
-    struct Meme {
-        var topText: String
-        var bottomText: String
-        var originalImage: UIImage
-        var memedImage: UIImage
-    }
     
     // Set meme attributes
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white /* TODO: fill in appropriate UIColor */,
         NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key.strokeWidth:  2.5/* TODO: fill in appropriate Float */
+        NSAttributedString.Key.strokeWidth:  -1.0/* TODO: fill in appropriate Float */
     ]
     
     override func viewDidLoad() {
@@ -140,28 +134,40 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     }
     
     func save() {
-            // Create the meme
-            let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
-            
+        // Create the meme
+        let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
+        
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
+        
+        // Reload table view
+        
     }
     
     
     func generateMemedImage() -> UIImage {
         
         // Hide navigation and toolbar
+        nav.title = nil
+        nav.hidesBackButton = true
+        navbarRight.tintColor = .white
         
-        toolbar.isHidden = true
-        navigationBar.isHidden = true
-
+        
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
+        
+        
         // Show navigation and toolbar
-        toolbar.isHidden = false
-        navigationBar.isHidden = false
+        nav.title = "Meme Editor"
+        nav.hidesBackButton = false
+        navbarRight.tintColor = .blue
+        
 
         return memedImage
     }
