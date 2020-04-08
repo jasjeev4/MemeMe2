@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate{
     
-    @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
@@ -19,6 +18,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     @IBOutlet weak var nav: UINavigationItem!
     @IBOutlet weak var navbarRight: UIBarButtonItem!
     @IBOutlet weak var galleryButton: UIButton!
+    @IBOutlet weak var cameraButton: UIButton!
     
     
     // Set meme attributes
@@ -102,7 +102,13 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     @objc func keyboardWillShow(_ notification: Notification) {
         // Move rest of the view to make room for keyboard
         
-        view.frame.origin.y = -getKeyboardHeight(notification)
+        // Execute the following only if the lower textfield is selected
+        if(!topText.isEditing) {
+        
+            // Move rest of the view to make room for keyboard
+            
+            view.frame.origin.y = -getKeyboardHeight(notification)
+        }
     }
     
     func getKeyboardHeight(_ notification: Notification) -> CGFloat {
@@ -152,6 +158,8 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         navbarRight.tintColor = .white
         
         // Hide button
+        cameraButton.isHidden = true
+        galleryButton.isHidden = true
         
         
         // Render view to an image
@@ -167,7 +175,9 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         nav.hidesBackButton = false
         navbarRight.tintColor = .blue
         
-        // Show button
+         // Show buttons
+        cameraButton.isHidden = false
+        galleryButton.isHidden = false
         
 
         return memedImage
