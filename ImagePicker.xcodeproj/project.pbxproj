@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C80B369A243CBBE9003F5E5F /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B3699243CBBE9003F5E5F /* CollectionViewController.swift */; };
+		C80B369C243CCD41003F5E5F /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B369B243CCD41003F5E5F /* MemeCollectionViewCell.swift */; };
 		C83A836F2434AF0200461DCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83A836E2434AF0200461DCC /* AppDelegate.swift */; };
 		C83A83712434AF0200461DCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83A83702434AF0200461DCC /* SceneDelegate.swift */; };
 		C83A83732434AF0200461DCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83A83722434AF0200461DCC /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C80B3699243CBBE9003F5E5F /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		C80B369B243CCD41003F5E5F /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 		C83A836B2434AF0200461DCC /* ImagePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83A836E2434AF0200461DCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C83A83702434AF0200461DCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C83A836E2434AF0200461DCC /* AppDelegate.swift */,
+				C80B369B243CCD41003F5E5F /* MemeCollectionViewCell.swift */,
 				C83A83702434AF0200461DCC /* SceneDelegate.swift */,
 				C83A83722434AF0200461DCC /* ViewController.swift */,
 				C83A83742434AF0200461DCC /* Main.storyboard */,
@@ -112,6 +117,7 @@
 				C83A837C2434AF1400461DCC /* Info.plist */,
 				C8931EDC2438AE3000294F69 /* Meme.swift */,
 				C8850A87243B689600FD596D /* TableViewController.swift */,
+				C80B3699243CBBE9003F5E5F /* CollectionViewController.swift */,
 			);
 			path = ImagePicker;
 			sourceTree = "<group>";
@@ -265,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80B369A243CBBE9003F5E5F /* CollectionViewController.swift in Sources */,
 				C83A83732434AF0200461DCC /* ViewController.swift in Sources */,
+				C80B369C243CCD41003F5E5F /* MemeCollectionViewCell.swift in Sources */,
 				C8931EDD2438AE3000294F69 /* Meme.swift in Sources */,
 				C83A836F2434AF0200461DCC /* AppDelegate.swift in Sources */,
 				C8850A88243B689600FD596D /* TableViewController.swift in Sources */,

@@ -141,9 +141,6 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         appDelegate.memes.append(meme)
-        
-        // Reload table view
-        
     }
     
     
