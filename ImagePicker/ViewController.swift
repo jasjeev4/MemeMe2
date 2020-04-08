@@ -151,6 +151,8 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         nav.hidesBackButton = true
         navbarRight.tintColor = .white
         
+        // Hide button
+        
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -164,6 +166,8 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         nav.title = "Meme Editor"
         nav.hidesBackButton = false
         navbarRight.tintColor = .blue
+        
+        // Show button
         
 
         return memedImage

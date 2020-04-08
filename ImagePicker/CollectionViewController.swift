@@ -20,10 +20,6 @@ class CollectionViewController: UICollectionViewController {
         collectionView.reloadData()
     }
     
-    func reload() {
-        collectionView.reloadData()
-    }
-    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
