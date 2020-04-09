@@ -25,7 +25,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     let memeTextAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.strokeColor: UIColor.black,
         NSAttributedString.Key.foregroundColor: UIColor.white /* TODO: fill in appropriate UIColor */,
-        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 60)!,
         NSAttributedString.Key.strokeWidth:  -1.0/* TODO: fill in appropriate Float */
     ]
     
@@ -132,6 +132,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     
     @objc func keyboardWillHide(_ notification: Notification) {
         view.frame.origin.y = 0
+        bottomText.defaultTextAttributes = memeTextAttributes
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

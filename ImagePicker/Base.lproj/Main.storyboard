@@ -67,17 +67,17 @@
                                     <constraint firstAttribute="height" constant="650" id="Lwn-AE-TxG"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-fj-03p">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-fj-03p">
                                 <rect key="frame" x="31" y="658" width="352" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-QU-kJp">
-                                <rect key="frame" x="169.5" y="162" width="75" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-QU-kJp">
+                                <rect key="frame" x="187.5" y="162" width="39" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="OCZ-tS-MBn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
@@ -110,7 +110,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="bottomText" destination="Hjd-fj-03p" id="KQh-b6-smJ"/>
+                        <outlet property="bottomText" destination="Hjd-fj-03p" id="pQE-0J-Xh3"/>
                         <outlet property="cameraButton" destination="Q6B-gq-cj5" id="RZU-jg-pze"/>
                         <outlet property="galleryButton" destination="ogi-wS-fxz" id="hCI-RN-DC7"/>
                         <outlet property="imageView" destination="nwY-Iv-Q0U" id="PLE-z8-VlC"/>
