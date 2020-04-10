@@ -60,6 +60,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q6B-gq-cj5">
                                 <rect key="frame" x="359" y="789" width="24" height="22"/>
                                 <state key="normal" image="camera.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="pickAnImageFromCamera:" destination="1qb-QS-Nai" eventType="touchUpInside" id="eJM-rt-chD"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nwY-Iv-Q0U">
                                 <rect key="frame" x="0.0" y="118" width="414" height="650"/>
@@ -67,18 +70,24 @@
                                     <constraint firstAttribute="height" constant="650" id="Lwn-AE-TxG"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-fj-03p">
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-fj-03p">
                                 <rect key="frame" x="31" y="658" width="352" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <connections>
+                                    <action selector="onBottomEditBegin:" destination="1qb-QS-Nai" eventType="editingDidBegin" id="IG3-9f-W5G"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-QU-kJp">
-                                <rect key="frame" x="187.5" y="162" width="39" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="7rW-QU-kJp">
+                                <rect key="frame" x="145" y="162" width="124" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="OCZ-tS-MBn"/>
+                                    <constraint firstAttribute="height" constant="50" id="OCZ-tS-MBn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                                <connections>
+                                    <action selector="onTopEditBegin:" destination="1qb-QS-Nai" eventType="editingDidBegin" id="bSZ-rA-zig"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

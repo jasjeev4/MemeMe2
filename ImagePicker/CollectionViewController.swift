@@ -14,6 +14,8 @@ class CollectionViewController: UICollectionViewController {
     @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     override func viewDidLoad() {
+        
+        // Set dimensions
         let space:CGFloat = 3.0
         let dimension = (view.frame.size.width - (2 * space)) / 2.0
 
@@ -24,6 +26,7 @@ class CollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        // Refresh collection on View reload
         collectionView.reloadData()
     }
     
@@ -40,6 +43,8 @@ class CollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let object = UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
+        
+        // Set up reusable cell
 
         let memeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "memeCollectionViewCell", for: indexPath) as! MemeCollectionViewCell
         
