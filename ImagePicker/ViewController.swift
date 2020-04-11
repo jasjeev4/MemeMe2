@@ -52,6 +52,8 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         self.topText.delegate = self
         self.bottomText.delegate = self
         
+        tabBarController?.tabBar.isHidden = true
+        
         //Subscribe to Keyboard notifications
         subscripbeToKeyboardNotifications()
     }
@@ -59,6 +61,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+        tabBarController?.tabBar.isHidden = false
     }
     
     func imagePickerController(_ picker: UIImagePickerController,
