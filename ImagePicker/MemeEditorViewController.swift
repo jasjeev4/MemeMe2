@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MemeEditorViewController.swift
 //  ImagePicker
 //
 //  Created by JASJEEV on 4/1/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate,
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate, UITextFieldDelegate{
     
     @IBOutlet weak var imageView: UIImageView!
@@ -80,17 +80,19 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
 
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        present(imagePicker, animated: true, completion: nil)
+        getImage(.camera)
     }
     
     @IBAction func pickAnImageFromAlbum(_ sender: Any) {
 
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
-        present(imagePicker, animated: true, completion: nil)
+        getImage(.photoLibrary)
+    }
+    
+    func getImage(_ source: UIImagePickerController.SourceType) {
+            let pickerController = UIImagePickerController()
+            pickerController.delegate = self
+            pickerController.sourceType = source
+            present(pickerController, animated: true, completion: nil)
     }
     
     
@@ -157,14 +159,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     func generateMemedImage() -> UIImage {
         
         // Hide navigation and toolbar
-        nav.title = nil
-        nav.hidesBackButton = true
-        navbarRight.tintColor = .white
-        
-        // Hide button
-        cameraButton.isHidden = true
-        galleryButton.isHidden = true
-        
+        hideOrShowTopAndBottomBars(_ hide: true)
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -172,19 +167,32 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
+        //show navigation and bottom bars
+        hideOrShowTopAndBottomBars(_ hide: false)
         
-        
-        // Show navigation and toolbar
-        nav.title = "Meme Editor"
-        nav.hidesBackButton = false
-        navbarRight.tintColor = .blue
-        
-         // Show buttons
-        cameraButton.isHidden = false
-        galleryButton.isHidden = false
-        
-
         return memedImage
+    }
+    
+    func hideOrShowTopAndBottomBars(_ hide: Bool) {
+        if(hide) {
+            nav.title = nil
+            nav.hidesBackButton = true
+            navbarRight.tintColor = .white
+
+            // Hide button
+            cameraButton.isHidden = true
+            galleryButton.isHidden = true
+        }
+        else {
+            // Show navigation and toolbar
+            nav.title = "Meme Editor"
+            nav.hidesBackButton = false
+            navbarRight.tintColor = .blue
+            
+             // Show buttons
+            cameraButton.isHidden = false
+            galleryButton.isHidden = false
+        }
     }
     
     @IBAction func shareMeme(_ sender: Any) {

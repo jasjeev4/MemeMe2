@@ -44,7 +44,7 @@
         <!--Meme Editor-->
         <scene sceneID="0iv-Vi-geb">
             <objects>
-                <viewController id="1qb-QS-Nai" customClass="ViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1qb-QS-Nai" customClass="MemeEditorViewController" customModule="ImagePicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HLm-Xu-T3l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
