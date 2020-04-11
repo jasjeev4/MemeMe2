@@ -41,4 +41,14 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let memeDetailViewController = self.storyboard?.instantiateViewController(withIdentifier:
+            "MemeDetailView") as! MemeDetailView
+        
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        memeDetailViewController.memedImage = appDelegate.memes[indexPath.row].memedImage
+        navigationController?.pushViewController(memeDetailViewController, animated: true)
+    }
+    
 }
