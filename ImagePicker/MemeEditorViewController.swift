@@ -159,7 +159,7 @@ UINavigationControllerDelegate, UITextFieldDelegate{
     func generateMemedImage() -> UIImage {
         
         // Hide navigation and toolbar
-        hideOrShowTopAndBottomBars(_ hide: true)
+        hideTopandBottomBars()
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -168,31 +168,29 @@ UINavigationControllerDelegate, UITextFieldDelegate{
         UIGraphicsEndImageContext()
         
         //show navigation and bottom bars
-        hideOrShowTopAndBottomBars(_ hide: false)
-        
+        showTopAndBottomBars()
         return memedImage
     }
     
-    func hideOrShowTopAndBottomBars(_ hide: Bool) {
-        if(hide) {
-            nav.title = nil
-            nav.hidesBackButton = true
-            navbarRight.tintColor = .white
+    func hideTopandBottomBars() {
+        nav.title = nil
+        nav.hidesBackButton = true
+        navbarRight.tintColor = .white
 
-            // Hide button
-            cameraButton.isHidden = true
-            galleryButton.isHidden = true
-        }
-        else {
-            // Show navigation and toolbar
-            nav.title = "Meme Editor"
-            nav.hidesBackButton = false
-            navbarRight.tintColor = .blue
-            
-             // Show buttons
-            cameraButton.isHidden = false
-            galleryButton.isHidden = false
-        }
+        // Hide button
+        cameraButton.isHidden = true
+        galleryButton.isHidden = true
+    }
+    
+    func showTopAndBottomBars() {
+        // Show navigation and toolbar
+        nav.title = "Meme Editor"
+        nav.hidesBackButton = false
+        navbarRight.tintColor = .blue
+        
+         // Show buttons
+        cameraButton.isHidden = false
+        galleryButton.isHidden = false
     }
     
     @IBAction func shareMeme(_ sender: Any) {

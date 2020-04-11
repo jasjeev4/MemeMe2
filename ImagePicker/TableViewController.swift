@@ -10,10 +10,6 @@ import Foundation
 import UIKit
 
 class TableViewController: UITableViewController {
-        
-    override func viewDidLoad() {
-        
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
